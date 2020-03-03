@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent { label 'viyahost' }
     stages {
         stage('Build') { 
             agent { docker 'python:2-alpine' }
