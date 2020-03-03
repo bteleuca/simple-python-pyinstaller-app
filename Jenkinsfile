@@ -1,8 +1,11 @@
 pipeline {
-    agent { label 'viyahost' }
+    agent none
     stages {
         stage('Build') { 
-            agent {
+            agent { 
+                { 
+                label 'viyahost'
+                }
                 docker {
                     image 'python:2-alpine' 
                 }
